@@ -720,6 +720,12 @@ grafana:
   service:
     enabled: true
     type: NodePort
+    port: 80
+    portName: http-web
+    targetPort: 3000
+    nodePort: 30000
+    appProtocol: TCP
+    
   ## ForceDeployDatasources Create datasource configmap even if grafana deployment has been disabled
   ##
   forceDeployDatasources: false
